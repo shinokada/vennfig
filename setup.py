@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.2.1",
     author="Shinichi Okada",
     author_email="okada.shin@gmail.com",
-    description="Basic Venn Diagram Figures package yay.",
+    description="Basic Venn Diagram Figures package.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/shinokada/vennfig",
