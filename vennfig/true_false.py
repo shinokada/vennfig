@@ -2,23 +2,31 @@ from matplotlib_venn import venn2, venn2_circles
 from matplotlib import pyplot as plt
 
 
-def true_false(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20):
+def true_false(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20,
+               title_a='TRUE', title_b='FALSE', set_a='A', set_b='B'):
     """
     TRUE, FALSE Venn diagram
 
     parameters
+    ----------
     subs: 
         1: default(both)
         2: TRUE
         3: FALSE
-    size: figsuze, default 15,15
-    fill_color: default skyblue
-    bg_color: default white
+    size: default 15,15
+    fill_color: default 'skyblue'
+    bg_color: default 'white'
     font_size: default 20
+    title_a: default 'TRUE'
+    title_b: default 'FALSE'
+    set_a: default 'A'
+    set_b: default 'B'
 
     example
+    -------
     true_false()
-    true_false(subs=2, size=5, fill_color='#d0f7f3', bg_color='#13edd7', font_size=10)
+    true_false(subs=2, size=5, fill_color='#d0f7f3', bg_color='#13edd7', title_a='P, Q, TRUE',
+           font_size=25, set_a='P', set_b='Q')
 
     """
 
@@ -31,9 +39,9 @@ def true_false(subs=1, size=15, fill_color='skyblue', bg_color='white', font_siz
 
     if subs == 1 or subs == 2:
         # TRUE
-        ax1.set_title("TRUE", fontsize=font_size)
+        ax1.set_title(title_a, fontsize=font_size)
 
-        v1 = venn2(subsets=(3, 3, 1), ax=ax1)
+        v1 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax1)
         c1 = venn2_circles(subsets=(3, 3, 1), ax=ax1)
         ax1.set_axis_on()
         ax1.set_facecolor(bg_color)
@@ -49,9 +57,9 @@ def true_false(subs=1, size=15, fill_color='skyblue', bg_color='white', font_siz
 
     if subs == 1 or subs == 3:
         # FALSE
-        ax2.set_title("FALSE", fontsize=font_size)
+        ax2.set_title(title_b, fontsize=font_size)
 
-        v2 = venn2(subsets=(3, 3, 1), ax=ax2)
+        v2 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax2)
         c2 = venn2_circles(subsets=(3, 3, 1), ax=ax2)
         ax2.set_axis_on()
         ax2.set_facecolor(bg_color)

@@ -1,5 +1,3 @@
-
-
 from .a_b import a_b
 from .and_nand import and_nand
 from .complement import complement
@@ -11,6 +9,3 @@ from .subsets import subsets
 from .true_false import true_false
 from .x_not_y import x_not_y
 from .xor_xnor import xor_xnor
-
-
-test = 'hi there 9'

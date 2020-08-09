@@ -2,23 +2,31 @@ from matplotlib_venn import venn2, venn2_circles
 from matplotlib import pyplot as plt
 
 
-def xor_xnor(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20):
+def xor_xnor(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20,
+             title_a='A XOR B', title_b='A XNOR B', set_a='A', set_b='B'):
     """
     XOR, XNOR Venn diagram
 
     parameters
+    ----------
     subs: 
         1: default(both)
         2: xor
         3: xnor
-    size: figsuze, default 15,15
-    fill_color: default skyblue
-    bg_color: default white
+    size: default 15
+    fill_color: default 'skyblue'
+    bg_color: default 'white'
     font_size: default 20
+    title_a: default 'A XOR B'
+    title_b: default 'A XNOR B'
+    set_a: default 'A'
+    set_b: default 'B'
 
     example
+    -------
     xor_xnor()
-    xor_xnor(subs=2, size=5, fill_color='#fa8069', bg_color='#fae5e1', font_size=10)
+    xor_xnor(subs=2, size=5, fill_color='#fa8069', bg_color='#fae5e1', 
+         font_size=25, title_a='P XOR Q', set_a='P', set_b='Q')
 
     """
 
@@ -31,9 +39,9 @@ def xor_xnor(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=
 
     if subs == 1 or subs == 2:
         # A XOR B
-        ax1.set_title("A XOR B", fontsize=font_size)
+        ax1.set_title(title_a, fontsize=font_size)
 
-        v1 = venn2(subsets=(3, 3, 1), ax=ax1)
+        v1 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax1)
         c1 = venn2_circles(subsets=(3, 3, 1), ax=ax1)
         ax1.set_axis_on()
         ax1.set_facecolor(bg_color)
@@ -50,9 +58,9 @@ def xor_xnor(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=
 
     if subs == 1 or subs == 3:
         # A XNOR B
-        ax2.set_title("A XNOR B", fontsize=font_size)
+        ax2.set_title(title_b, fontsize=font_size)
 
-        v2 = venn2(subsets=(3, 3, 1), ax=ax2)
+        v2 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax2)
         c2 = venn2_circles(subsets=(3, 3, 1), ax=ax2)
         ax2.set_axis_on()
         ax2.set_facecolor(fill_color)

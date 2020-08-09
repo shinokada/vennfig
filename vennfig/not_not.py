@@ -2,23 +2,31 @@ from matplotlib_venn import venn2, venn2_circles
 from matplotlib import pyplot as plt
 
 
-def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20):
+def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20,
+            title_a='NOT A', title_b='NOT B', set_a='A', set_b='B'):
     """
     NOT A, NOT B Venn diagram
 
     parameters
+    ----------
     subs: 
         1: default(both)
         2: NOT A 
         3: NOT B
-    size: figsuze, default 15,15
-    fill_color: default skyblue
-    bg_color: default white
+    size: default 15
+    fill_color: default 'skyblue'
+    bg_color: default 'white'
     font_size: default 20
+    title_a: default 'A'
+    title_b: default 'B'
+    set_a: default 'A'
+    set_b: default 'B'
 
     example
+    -------
     not_not()
-    not_not(subs=3, size=5, fill_color='#e8e815', bg_color='#f2f2aa', font_size=10)
+    not_not(subs=3, size=5, fill_color='#e8e815', bg_color='#f2f2aa', font_size=25, 
+        title_b='NOT Q', set_a='P', set_b='Q')
 
     """
 
@@ -31,9 +39,9 @@ def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=2
 
     if subs == 1 or subs == 2:
         # NOT A
-        ax1.set_title("NOT A", fontsize=font_size)
+        ax1.set_title(title_a, fontsize=font_size)
 
-        v1 = venn2(subsets=(3, 3, 1), ax=ax1)
+        v1 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax1)
         c1 = venn2_circles(subsets=(3, 3, 1), ax=ax1)
         ax1.set_axis_on()
         ax1.set_facecolor(fill_color)
@@ -50,9 +58,9 @@ def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=2
 
     if subs == 1 or subs == 3:
         # NOT B
-        ax2.set_title("NOT B", fontsize=font_size)
+        ax2.set_title(title_b, fontsize=font_size)
 
-        v2 = venn2(subsets=(3, 3, 1), ax=ax2)
+        v2 = venn2(subsets=(3, 3, 1), set_labels=(set_a, set_b), ax=ax2)
         c2 = venn2_circles(subsets=(3, 3, 1), ax=ax2)
         ax2.set_axis_on()
         ax2.set_facecolor(fill_color)
