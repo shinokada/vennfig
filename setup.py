@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="vennfig",
-    version="0.2.0",
+    version="0.2.1",
     author="Shinichi Okada",
     author_email="okada.shin@gmail.com",
     description="Basic Venn Diagram Figures package yay.",
