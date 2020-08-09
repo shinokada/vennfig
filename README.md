@@ -20,7 +20,7 @@ On Jupyter:
 
 [See all the examples here.](https://jovian.ml/shinokada/vennfig)
 
-### A, B
+### A, B Venn diagram
 
 ```
 import vennfig as v
@@ -34,7 +34,7 @@ v.a_b(subs=2, size=6, fill_color='#f5b705', bg_color='#f7edd0',
 
 ![A, B](https://raw.githubusercontent.com/shinokada/vennfig/master/image/a_b.png)
 
-### A AND B, A NAND B
+### A AND B, A NAND B Venn diagram
 
 ```
 import vennfig as v
@@ -48,7 +48,7 @@ v.and_nand(subs=2, size=5, fill_color='#f55faa', bg_color='#f2e4eb',
 
 ![A AND B, A nand B](https://raw.githubusercontent.com/shinokada/vennfig/master/image/and_nand.png)
 
-### TRUE, FALSE
+### TRUE, FALSE Venn diagram
 
 ```
 import vennfig as v
@@ -62,7 +62,7 @@ v.true_false(subs=2, size=5, fill_color='#d0f7f3', bg_color='#13edd7', title_a='
 
 ![TRUE, FALSE](https://raw.githubusercontent.com/shinokada/vennfig/master/image/true_false.png)
 
-### OR, NOR
+### OR, NOR Venn diagram
 
 ```
 import vennfig as v
@@ -76,7 +76,7 @@ v.or_nor(subs=3, size=5, fill_color='#88f77c', bg_color='#daf5d7', font_size=25,
 
 ![OR, NOR](https://raw.githubusercontent.com/shinokada/vennfig/master/image/or_nor.png)
 
-### XOR, XNOR
+### XOR, XNOR Venn diagram
 
 ```
 import vennfig as v
@@ -90,7 +90,7 @@ v.xor_xnor(subs=2, size=5, fill_color='#fa8069', bg_color='#fae5e1',
 
 ![XOR, XNOR](https://raw.githubusercontent.com/shinokada/vennfig/master/image/xor_xnor.png)
 
-### NOT A, NOT B
+### NOT A, NOT B Venn diagram
 
 ```
 import vennfig as v
@@ -104,7 +104,7 @@ v.not_not(subs=3, size=5, fill_color='#e8e815', bg_color='#f2f2aa', font_size=25
 
 ![NOT A, NOT B](https://raw.githubusercontent.com/shinokada/vennfig/master/image/nota_notb.png)
 
-### A NOT B, B NOT A
+### A NOT B, B NOT A Venn diagram
 
 ```
 import vennfig as v
@@ -119,7 +119,7 @@ v.x_not_y(subs=3, size=5, fill_color='#d4812f', bg_color='#e3dad1', font_size=25
 ![A NOT B, B NOT A](https://raw.githubusercontent.com/shinokada/vennfig/master/image/anotb.png)
 
 
-### Implication
+### Implication Venn diagram
 
 ```
 import vennfig as v
@@ -133,7 +133,7 @@ v.implication(subs=3, size=5, fill_color='#5ba870', bg_color='#d7f5df', font_siz
 
 ![Implication](https://raw.githubusercontent.com/shinokada/vennfig/master/image/impl.png)
 
-### Mutually exclusive
+### Mutually exclusive Venn diagram
 
 ```
 import vennfig as v
@@ -147,7 +147,7 @@ v.mut_exclusive(size=10, fill_color='#2d5c91', bg_color='#e1e8f0', font_size=25,
 
 ![Mutually exclusive](https://raw.githubusercontent.com/shinokada/vennfig/master/image/mutual.png)
 
-### Complement
+### Complement Venn diagram
 
 ```
 import vennfig as v
@@ -161,7 +161,7 @@ v.complement(subs=2, size=5, fill_color='#3eacb5', bg_color='#c1d9db', font_colo
 
 ![Complement](https://raw.githubusercontent.com/shinokada/vennfig/master/image/complement.png)
 
-### Subsets
+### Subsets Venn diagram
 
 ```
 import vennfig as v
