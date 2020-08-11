@@ -3,24 +3,27 @@ from matplotlib import pyplot as plt
 
 
 def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=20,
-            title_a='NOT A', title_b='NOT B', set_a='A', set_b='B'):
+            title_a='NOT A', title_b='NOT B', set_a='A', set_b='B', text_size=15):
     """
     NOT A, NOT B Venn diagram
 
     parameters
     ----------
+
     subs: 
-        1: default(both)
-        2: NOT A 
-        3: NOT B
-    size: default 15
-    fill_color: default 'skyblue'
-    bg_color: default 'white'
-    font_size: default 20
-    title_a: default 'A'
-    title_b: default 'B'
-    set_a: default 'A'
-    set_b: default 'B'
+        1 shows the both diagram.(default)
+        2 shows the NOT A diagram.
+        3 shows the NOT B diagram.
+
+    size: Set the figure size. The default value is 15.
+    fill_color: Set the filling color. The default value is 'skyblue'.
+    bg_color: Set the background color. The default value is 'white'.
+    font_size: Set the title font size. The default value is 20.
+    title_a: Set the title value for the left diagram. The default value is 'NOT A'.
+    title_b: Set the title value for the left diagram. The default value is 'NOT B'.
+    set_a: Set the set name for the left diagram. The default value is 'A'.
+    set_b: Set the set name for the left diagram. The default value is 'B'.
+    text_size: Set the text size. The default value is 15.
 
     example
     -------
@@ -75,4 +78,5 @@ def not_not(subs=1, size=15, fill_color='skyblue', bg_color='white', font_size=2
             if txt:
                 txt.set_text('')
 
+    plt.rc('font', size=text_size)
     plt.show()

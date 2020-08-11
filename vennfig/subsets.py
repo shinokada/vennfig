@@ -3,19 +3,21 @@ from matplotlib import pyplot as plt
 
 
 def subsets(size=15, fill_color='skyblue', bg_color='white', font_size=20,
-            title='Subsets', set_a='A', set_b='B'):
+            title='Subsets', set_a='A', set_b='B', text_size=15):
     """
     Subsets Venn diagram
 
     parameters
-    ----------
-    size: default 15
-    fill_color: default 'skyblue'
-    bg_color: default 'white'
-    font_size: default 20
-    title: default 'Subsets'
-    set_a: default 'A'
-    set_b: default 'B'
+    ---------- 
+
+    size: Set the figure size. The default value is 15.
+    fill_color: Set the filling color. The default value is 'skyblue'.
+    bg_color: Set the background color. The default value is 'white'.
+    font_size: Set the title font size. The default value is 20.
+    title: Set the title. The default value is 'Subsets'.
+    set_a: Set the set name for the left diagram. The default value is 'A'.
+    set_b: Set the set name for the left diagram. The default value is 'B'.
+    text_size: Set the text size. The default value is 15.
 
     example
     -------
@@ -41,4 +43,5 @@ def subsets(size=15, fill_color='skyblue', bg_color='white', font_size=20,
     plt.title(title, fontsize=font_size)
     ymin, ymax = plt.gca().get_ylim()
     plt.ylim(ymin - 0.1, ymax)
+    plt.rc('font', size=text_size)
     plt.show()

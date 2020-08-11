@@ -4,25 +4,27 @@ from matplotlib import pyplot as plt
 
 def complement(subs=1, size=15, fill_color='skyblue', bg_color='white', font_color='#000',
                font_size=20, title_a='Complement A', title_b="Complement A'",
-               set_a="A", set_b="A'"):
+               set_a="A", set_b="A'", text_size=15):
     """
     Complement Venn diagram
 
     parameters
     ----------
+
     subs: 
-        1: default(both)
-        2: A filled  
-        3: A' filled
-    size: default 15
-    fill_color: default 'skyblue'
-    bg_color: default 'white'
-    font_color: default '#000' (black)
-    font_size: default 20
-    title_a: 'default Complement A'
-    title_b: "default Complement A'"
-    set_a: default 'A'
-    set_b: default 'B'
+        1 shows the both diagram.(default)
+        2 shows A filled diagram.
+        3 shows A' filled diagram.
+
+    size: Set the figure size. The default value is 15.
+    fill_color: Set the tfilling color. The default value is 'skyblue'.
+    bg_color: Set the background color. The default value is 'white'.
+    font_size: Set the title font size. The default value is 20.
+    title_a: Set the title value for the left diagram. The default value is 'Complement A'.
+    title_b: Set the title value for the left diagram. The default value is "Complement A'".
+    set_a: Set the set name for the left diagram. The default value is 'A'.
+    set_b: Set the set name for the left diagram. The default value is 'B'.
+    text_size: Set the text size. The default value is 15.
 
     example
     -------
@@ -95,4 +97,5 @@ def complement(subs=1, size=15, fill_color='skyblue', bg_color='white', font_col
         ax2.text(-1, 0.2, r'U', fontsize=font_size)
         ax2.set_title(title_b, fontsize=font_size)
 
+    plt.rc('font', size=text_size)
     plt.show()
