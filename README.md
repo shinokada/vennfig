@@ -1,5 +1,13 @@
 # vennfig
 
+[Please read more details.](https://towardsdatascience.com/introducing-basic-venn-diagram-python-package-vennfig-fa3f8e4dcb36)
+
+[Find updates at Github.](https://github.com/shinokada/vennfig)
+
+[Please sign up for more free resources.](https://mailchi.mp/ae9891ba897a/codewithshin)
+
+
+
 `vennfig` is a Python package and is a wrapper for [`matplotlib_venn`](https://github.com/konstantint/matplotlib-venn)
 
 You can draw simple Venn diagrams with 2 lines of code.
