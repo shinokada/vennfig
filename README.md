@@ -1,6 +1,6 @@
 # vennfig
 
-[Please read more details.](https://towardsdatascience.com/introducing-basic-venn-diagram-python-package-vennfig-fa3f8e4dcb36)
+[Read more details.](https://towardsdatascience.com/introducing-basic-venn-diagram-python-package-vennfig-fa3f8e4dcb36)
 
 [Find updates at Github.](https://github.com/shinokada/vennfig)
 
